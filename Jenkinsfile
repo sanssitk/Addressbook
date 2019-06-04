@@ -1,6 +1,6 @@
 node{
     stage('Git upload'){
-        git credentialsId: 'demo', url: 'https://github.com/Prabhu4tx/addressbook'
+        git credentialsId: 'demo', url: 'https://github.com/sanssitk/addressbook'
         
     }
     stage('Maven build'){
@@ -13,7 +13,7 @@ node{
     stage ('docker build')
     {
       // sh  "docker version"
-        sh " docker build -t prabhu4029/myapp1:2.1.1 ."
+        sh " docker build -t sanssitk/myapp1:2.1.1 ."
     }
     stage ('push docker image')
     {
